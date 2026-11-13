@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Par4d0xyBot</RootNamespace>
+    <!-- VERIFY: копируется ли dll вручную в SPT/user/mods/Par4d0xyBot/
+         или сборка настроена через postbuild скрипт, как в server-mod-examples -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Раньше эти три были через NuGet (PackageReference, версия "4.0.*") —
+         это могло подтягивать другую сборку, чем та под которую скомпилирован
+         FikaServer.dll/0Harmony.dll, из-за чего типы с одинаковыми именами
+         (например BotBase) не считались совместимыми. Теперь все SPT-сборки —
+         прямые ссылки с диска, гарантированно одна и та же версия everywhere. -->
+    <Reference Include="SPTarkov.Server.Core">
+      <HintPath>D:\EscapeFromTarkov\EscapeFromTarkov\SPT\SPTarkov.Server.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SPTarkov.Common">
+      <HintPath>D:\EscapeFromTarkov\EscapeFromTarkov\SPT\SPTarkov.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SPTarkov.DI">
+      <HintPath>D:\EscapeFromTarkov\EscapeFromTarkov\SPT\SPTarkov.DI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- Эти две раньше подтягивались автоматически через NuGet-пакеты
+         (транзитивные зависимости SPTarkov.DI/.Common) — при переходе на
+         прямые ссылки это перестало происходить само. Если путь не
+         совпадёт — поищи файл по всей папке SPT, он почти наверняка там. -->
+    <Reference Include="SemanticVersioning">
+      <HintPath>D:\EscapeFromTarkov\EscapeFromTarkov\SPT\SemanticVersioning.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>D:\EscapeFromTarkov\EscapeFromTarkov\SPT\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- ОБЯЗАТЕЛЬНО: замени HintPath на реальный путь до FikaServer.dll
+         на твоей машине (там, где у тебя стоит Fika-Server-CSharp мод —
+         судя по логу загрузки, GUID "Fika", это где-то в SPT\user\mods\...).
+         Без этой ссылки Par4d0xyPresenceHook.cs не скомпилируется. -->
+    <Reference Include="FikaServer">
+      <HintPath>D:\EscapeFromTarkov\EscapeFromTarkov\SPT\user\mods\fika-server\FikaServer.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>D:\EscapeFromTarkov\EscapeFromTarkov\SPT\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SPTarkov.Reflection">
+      <HintPath>D:\EscapeFromTarkov\EscapeFromTarkov\SPT\SPTarkov.Reflection.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="data\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

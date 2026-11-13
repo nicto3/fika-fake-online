@@ -1,0 +1,13 @@
+D:\MODdev\par4d0xy-bot\bin\Debug\net9.0\data\par4d0xy_loadout.json
+D:\MODdev\par4d0xy-bot\bin\Debug\net9.0\Par4d0xyBot.deps.json
+D:\MODdev\par4d0xy-bot\bin\Debug\net9.0\Par4d0xyBot.dll
+D:\MODdev\par4d0xy-bot\bin\Debug\net9.0\Par4d0xyBot.pdb
+D:\MODdev\par4d0xy-bot\obj\Debug\net9.0\Par4d0xyBot.csproj.AssemblyReference.cache
+D:\MODdev\par4d0xy-bot\obj\Debug\net9.0\Par4d0xyBot.GeneratedMSBuildEditorConfig.editorconfig
+D:\MODdev\par4d0xy-bot\obj\Debug\net9.0\Par4d0xyBot.AssemblyInfoInputs.cache
+D:\MODdev\par4d0xy-bot\obj\Debug\net9.0\Par4d0xyBot.AssemblyInfo.cs
+D:\MODdev\par4d0xy-bot\obj\Debug\net9.0\Par4d0xyBot.csproj.CoreCompileInputs.cache
+D:\MODdev\par4d0xy-bot\obj\Debug\net9.0\Par4d0xyBot.dll
+D:\MODdev\par4d0xy-bot\obj\Debug\net9.0\refint\Par4d0xyBot.dll
+D:\MODdev\par4d0xy-bot\obj\Debug\net9.0\Par4d0xyBot.pdb
+D:\MODdev\par4d0xy-bot\obj\Debug\net9.0\ref\Par4d0xyBot.dll

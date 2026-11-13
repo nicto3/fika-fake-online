@@ -1,0 +1,25 @@
+{
+  "_comment": "Это 'тайник' par4d0xy. Мод читает и переписывает этот файл сам. Формат items — как в обычном SPT-инвентаре (tpl id + slotId). Начни с чего-то простого, потом усложни.",
+  "nickname": "par4d0xy",
+  "alive": true,
+  "lastOutcome": "none",
+  "raidsPlayed": 0,
+  "raidsSurvived": 0,
+  "equipment": {
+    "Weapon": null,
+    "ArmorVest": null,
+    "TacticalVest": null,
+    "Headwear": null,
+    "Backpack": null,
+    "Items": []
+  },
+  "nakedFallback": {
+    "_comment": "Что выдать, если умер и тайник пуст. По умолчанию — нож и минимум.",
+    "Weapon": null,
+    "ArmorVest": null,
+    "TacticalVest": null,
+    "Headwear": null,
+    "Backpack": null,
+    "Items": []
+  }
+}
