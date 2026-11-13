@@ -1,3 +1,24 @@
+
+
+<h1>working in game</h1>
+<img width="438" height="269" alt="photo_2026-11-13_14-32-23" src="https://github.com/user-attachments/assets/7a5d4abf-7180-4985-b61d-d90b84e1c789" />
+<br>
+I don’t see the point in describing the project in detail in my own words; Copilot has already done a better job of it below.
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
 # Par4d0xyBot — мод для SPT 4.0.13
 
 Идея: постоянный NPC-бот с ником `par4d0xy`, снаряга которого хранится
